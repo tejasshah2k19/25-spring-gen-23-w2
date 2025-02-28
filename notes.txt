@@ -1,0 +1,12 @@
+1 class extends HttpServlet
+2 service 
+3 @Web web.xml 
+
+
+1 create class 
+2 @Controller 
+
+no need to service method -> spring logic wise method 
+
+1 controller having n number service method 
+
