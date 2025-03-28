@@ -10,3 +10,45 @@ no need to service method -> spring logic wise method
 
 1 controller having n number service method 
 
+
+
+
+dep -> spring web , devtools 
+	   validations 
+	   lombok 
+	   
+
+database ->
+
+step1: 
+		spring jdbc dep + driver{mysql,pg}
+			Connection
+			PreparedStatement 		   
+		   	no manual db connection
+		   	no manual prepared stmt 
+		   	
+step2:
+		db configuration 
+			web.xml 
+			boot -> no xml
+					application.properties 
+		
+		url 
+		userName
+		password 
+		
+		
+step3: 
+		we have to create dao -> query 
+		JdbcTemplate -> will execute all the query 
+		 
+	
+		   	
+----------------------------------------------------------		   	
+		   	
+		   	
+		   	
+		   	
+		   	
+		   	
+		   	
