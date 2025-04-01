@@ -13,6 +13,9 @@
 
 <a href="signup">New User</a>
 <br>
+<a href="search">Search</a>
+
+<br>
 	<table border="1">
 		<tr>
 			<th>UserId</th>

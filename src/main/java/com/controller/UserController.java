@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bean.UserBean;
@@ -38,4 +39,21 @@ public class UserController {
 		model.addAttribute("user",user);
 		return "ViewUser";
 	}
+	
+	@GetMapping("search")
+	public String search() {
+		return "SearchUser";
+	}
+	
+	
+
+	@PostMapping("search")
+	public String searchDb(String firstName,Model model) {
+	List<UserBean>	users = userDao.searchByFirstName(firstName);
+	model.addAttribute("users",users);
+		return "ListUser";
+	}
+	
+	
+	
 }

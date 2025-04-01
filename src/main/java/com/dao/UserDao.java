@@ -39,12 +39,18 @@ public class UserDao {
 			UserBean user = stmt.queryForObject("select * from users where userId = ?",
 					new BeanPropertyRowMapper<>(UserBean.class), new Object[] { userId });
 
-			 
- 			return user;
+			return user;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public List<UserBean> searchByFirstName(String firstName) {
+		// TODO Auto-generated method stub
+		return stmt.query("select * from users where firstName like ?", new BeanPropertyRowMapper<>(UserBean.class),
+				new Object[] { "%"+firstName+"%" });
+
 	}
 
 }
