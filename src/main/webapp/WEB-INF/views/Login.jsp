@@ -8,7 +8,13 @@
 </head>
 <body>
 	<h2>Login</h2>
-
+	<form action="authenticate" method="post">
+	
+		Email : <input type="text" name="email"/><br><br> 
+		Password : <input type="password" name="password"/><br><br> 
+		
+		<input type="submit" value="Login"/>
+	</form>
 <a href="signup">Signup</a>
 </body>
 </html>

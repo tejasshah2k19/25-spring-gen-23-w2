@@ -7,6 +7,7 @@ public class UserBean {
 	private String lastName;
 	private String email;
 	private String password;
+	private String profilePicUrl;
 	
 	
 
@@ -50,4 +51,14 @@ public class UserBean {
 		this.password = password;
 	}
 
+	public String getProfilePicUrl() {
+		return profilePicUrl;
+	}
+
+	public void setProfilePicUrl(String profilePicUrl) {
+		this.profilePicUrl = profilePicUrl;
+	}
+
+	
+	
 }

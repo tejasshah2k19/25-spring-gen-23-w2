@@ -46,7 +46,36 @@ step3:
 		   	
 ----------------------------------------------------------		   	
 		   	
+		   	profile pic : 
+		   				db store 
+		   				local server 
+		   				tp : cloud  {s3 cloudinary } 
 		   	
+		   	
+		   	
+		   	1) bean =>profile pic url 
+		   	2) form -> method : post 
+		   			   encType : multipart/form-data 
+		    3) table -> add colum profilePicUrl 
+		       bean -> 	add varibale profilePicUrl 
+		    
+		    4) pom.xml {cloudinary-http-44}				
+		   	5) cloudinary signup 
+		   	6) cloudinary login -> api key ,secret 
+		   	7) cloudinary config -> configuration 
+		   	8) controller -> fileupload -> cloudinary upload ->return url -> db save 			
+		   	9) cloud url get db save 
+		   				
+		   				 
+		   				
+		   				
+		   				
+		   				
+		   				
+		   				
+		   				
+		   				
+		   				 
 		   	
 		   	
 		   	

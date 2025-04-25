@@ -18,8 +18,8 @@ public class UserDao {
 	// singleton design pattern
 	public void addUser(UserBean userBean) {
 		// insert update delete
-		stmt.update("insert into users (firstName,lastName,email,password) values (?,?,?,?)", userBean.getFirstName(),
-				userBean.getLastName(), userBean.getEmail(), userBean.getPassword());
+		stmt.update("insert into users (firstName,lastName,email,password,profilePicUrl) values (?,?,?,?,?)", userBean.getFirstName(),
+				userBean.getLastName(), userBean.getEmail(), userBean.getPassword(),userBean.getProfilePicUrl());
 	}
 
 	// select
@@ -51,6 +51,17 @@ public class UserDao {
 		return stmt.query("select * from users where firstName like ?", new BeanPropertyRowMapper<>(UserBean.class),
 				new Object[] { "%"+firstName+"%" });
 
+	}
+	public UserBean getByEmail(String email) {
+		try {
+			UserBean user = stmt.queryForObject("select * from users where email = ?",
+					new BeanPropertyRowMapper<>(UserBean.class), new Object[] { email });
+
+			return user;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }
